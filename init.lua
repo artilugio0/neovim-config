@@ -1,5 +1,6 @@
 require('config.options')
 require('config.colors')
+require('config.statusline')
 require('config.keymaps')
 require('config.autoformat')
 require('config.yank')
