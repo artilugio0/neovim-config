@@ -15,7 +15,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
     -- diagnostics
     vim.keymap.set("n", "<leader>ee", vim.diagnostic.open_float, opts)
-    vim.keymap.set("n", "<leader>ep", vim.diagnostic.goto_prev, opts)
-    vim.keymap.set("n", "<leader>en", vim.diagnostic.goto_next, opts)
+    vim.keymap.set("n", "<leader>ep", function() vim.diagnostic.jump({count = -1}) end, opts)
+    vim.keymap.set("n", "<leader>en", function() vim.diagnostic.jump({count = 1}) end, opts)
   end
 })
