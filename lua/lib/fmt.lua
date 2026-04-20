@@ -13,7 +13,7 @@ M.set_format_program = function(ext, program, args)
 
   vim.api.nvim_create_autocmd('BufWritePre', {
     pattern = '*.' .. ext,
-    group = vim.api.nvim_create_augroup(ext .. '-fortam-on-write', { clear = true }),
+    group = vim.api.nvim_create_augroup(ext .. '-format-on-write', { clear = true }),
     callback = function()
       local bufnr = vim.api.nvim_get_current_buf()
       local result = vim.system(program_args, {

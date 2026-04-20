@@ -1,6 +1,5 @@
-local libfmt = require('lib.fmt')
-
-pcall(libfmt.set_format_program, 'tf', 'terraform', {'fmt', '-'})
+-- local libfmt = require('lib.fmt')
+-- pcall(libfmt.set_format_program, 'go', 'gofmt')
 
 vim.opt_local.expandtab = true
 vim.opt_local.tabstop = 2
