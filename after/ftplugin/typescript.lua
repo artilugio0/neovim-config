@@ -10,7 +10,9 @@ vim.lsp.config('ts_ls', {
   settings = {},
 })
 
+local group = vim.api.nvim_create_augroup("custom_group_typescript", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
+  group = group,
   pattern = "*.ts",
   callback = function()
     vim.lsp.buf.format({ async = false })
